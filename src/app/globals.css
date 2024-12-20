@@ -1,0 +1,41 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --neutral-0: #ffffff;
+  --neutral-1: #f9f9f9;
+  --neutral-2: #f0f1f2;
+  --neutral-5: #ebebeb;
+  --neutral-7: #dcdcdc;
+  --neutral-10: #c0c1c2;
+  --neutral-20: #979899;
+  --neutral-30: #6d6e70;
+  --neutral-40: #4d4d4d;
+  --neutral-50: #2e3033;
+  --neutral-55: #252629;
+  --neutral-60: #202224;
+  --neutral-70: #1c1d1f;
+  --neutral-80: #21242a;
+  --neutral-90: #141517;
+  --neutral-95: #0e0f10;
+  --neutral-99: #050505;
+  --neutral-100: #000000;
+
+  --bg-base: var(--neutral-0);
+  --content-neutral-base: var(--neutral-40);
+}
+
+:root.dark {
+  --bg-base: var(--neutral-90);
+  --content-neutral-base: var(--neutral-30);
+}
+
+body {
+  background-color: var(--bg-base);
+  font-family: var(--font-noto-sans-kr), Arial, Helvetica, sans-serif;
+  color: var(--content-neutral-base);
+  transition:
+    background-color 0.3s ease,
+    color 0.3s ease;
+}
