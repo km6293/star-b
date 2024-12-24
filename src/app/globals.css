@@ -23,19 +23,50 @@
   --neutral-100: #000000;
 
   --bg-base: var(--neutral-0);
+
+  --content-neutral-primary: var(--neutral-95);
   --content-neutral-base: var(--neutral-40);
+
+  --surface-neutral-primary: var(--neutral-0);
+  --surface-neutral-base: var(--neutral-2);
+
+  --border-neutral-base: var(--neutral-10);
 }
 
 :root.dark {
   --bg-base: var(--neutral-90);
+
+  --content-neutral-primary: var(--neutral-0);
   --content-neutral-base: var(--neutral-30);
+
+  --surface-neutral-primary: var(--neutral-95);
+  --surface-neutral-base: var(--neutral-50);
+
+  --border-neutral-base: var(--neutral-40);
 }
 
+html::-webkit-scrollbar {
+  display: none;
+  width: 0;
+}
+header {
+  transition:
+    background-color 0.2s ease,
+    color 0.2s ease;
+}
 body {
   background-color: var(--bg-base);
   font-family: var(--font-noto-sans-kr), Arial, Helvetica, sans-serif;
   color: var(--content-neutral-base);
   transition:
-    background-color 0.3s ease,
-    color 0.3s ease;
+    background-color 0.2s ease,
+    color 0.2s ease;
+
+  overflow-y: auto;
+  overscroll-behavior: contain;
+  scrollbar-width: none;
+  overflow-x: hidden;
+  -ms-overflow-style: none;
 }
+
+

@@ -1,26 +1,26 @@
-'use client';
+'use client'
 
-import { useState, useEffect, type PropsWithChildren } from 'react';
+import { useState, useEffect, type PropsWithChildren } from 'react'
 
-type Props = PropsWithChildren;
+type Props = PropsWithChildren
 
 const MswInitializer = ({ children }: Props) => {
-  const [isMswInitialized, setIsMswInitialized] = useState(false);
+  const [isMswInitialized, setIsMswInitialized] = useState(false)
 
   useEffect(() => {
     const init = async () => {
-      const { initMocks } = await import('@server/init');
-      await initMocks();
-      setIsMswInitialized(true);
-    };
-    if (!isMswInitialized) {
-      init();
+      const { initMocks } = await import('@server/init')
+      await initMocks()
+      setIsMswInitialized(true)
     }
-  }, [isMswInitialized]);
+    if (!isMswInitialized) {
+      init()
+    }
+  }, [isMswInitialized])
 
-  if (!isMswInitialized) return null;
+  if (!isMswInitialized) return null
 
-  return children;
-};
+  return children
+}
 
-export default MswInitializer;
+export default MswInitializer

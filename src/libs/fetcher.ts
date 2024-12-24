@@ -5,6 +5,8 @@ const defaultHeaders = {
 }
 
 const fetcher = async <T>({ method, url, customOptions }: FetcherParams): Promise<T> => {
+  const baseUrl = process.env.NEXT_PUBLIC_BASE_URL
+
   const headers = {
     ...defaultHeaders,
     ...customOptions?.headers
@@ -13,11 +15,12 @@ const fetcher = async <T>({ method, url, customOptions }: FetcherParams): Promis
   const options: RequestInit = {
     method,
     headers: { ...headers },
-    body: customOptions?.body ? JSON.stringify(customOptions.body) : undefined
+    body: customOptions?.body ? JSON.stringify(customOptions.body) : undefined,
+    next: customOptions?.next,
+    cache: customOptions?.cache
   }
 
-  const response = await fetch(url, options)
-
+  const response = await fetch(baseUrl + url, options)
   if (!response.ok) {
     throw new Error('error')
   }

@@ -43,6 +43,18 @@ const appFonts = plugin(function ({ addUtilities }) {
       lineHeight: '1.5'
     },
     // medium
+    '.star-medium20': {
+      fontFamily: FONT_FAMILY,
+      fontSize: '1.25rem',
+      fontWeight: '500',
+      lineHeight: '1.5'
+    },
+    '.star-medium18': {
+      fontFamily: FONT_FAMILY,
+      fontSize: '1.125rem',
+      fontWeight: '500',
+      lineHeight: '1.5'
+    },
     '.star-medium16': {
       fontFamily: FONT_FAMILY,
       fontSize: '1rem',
@@ -60,6 +72,45 @@ const appFonts = plugin(function ({ addUtilities }) {
       fontSize: '0.75rem',
       fontWeight: '500',
       lineHeight: '1.5'
+    },
+    '.star-medium10': {
+      fontFamily: FONT_FAMILY,
+      fontSize: '0.625rem',
+      fontWeight: '500',
+      lineHeight: '1.5'
+    },
+    '.star-medium8': {
+      fontFamily: FONT_FAMILY,
+      fontSize: '0.5rem',
+      fontWeight: '500',
+      lineHeight: '1.5'
+    },
+
+    // light
+
+    '.star-light14': {
+      fontFamily: FONT_FAMILY,
+      fontSize: '0.875rem',
+      fontWeight: '300',
+      lineHeight: '1.5'
+    },
+    '.star-light12': {
+      fontFamily: FONT_FAMILY,
+      fontSize: '0.75rem',
+      fontWeight: '300',
+      lineHeight: '1.5'
+    },
+    '.star-light10': {
+      fontFamily: FONT_FAMILY,
+      fontSize: '0.625rem',
+      fontWeight: '300',
+      lineHeight: '1.5'
+    },
+    '.star-light8': {
+      fontFamily: FONT_FAMILY,
+      fontSize: '0.5rem',
+      fontWeight: '300',
+      lineHeight: '1.5'
     }
   }
 
@@ -68,20 +119,7 @@ const appFonts = plugin(function ({ addUtilities }) {
 
 const appBoxes = plugin(function ({ addUtilities }) {
   const newUtilities: CSSRuleObject = {
-    '.star-scrollable': {
-      overflowY: 'auto',
-      overscrollBehavior: 'contain',
-      scrollbarWidth: 'none',
-      overflowX: 'hidden',
-      '-ms-overflow-style': 'none',
-      '&::-webkit-scrollbar': {
-        display: 'none'
-      }
-    },
-    '.star-overlay': {
-      background:
-        'linear-gradient(to bottom, rgba(0, 0, 0, 0.8), transparent 50%), linear-gradient(to top, rgba(0, 0, 0, 0.8), transparent 50%)'
-    }
+    '.star-overlay': {}
   }
 
   addUtilities(newUtilities)

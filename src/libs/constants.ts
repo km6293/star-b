@@ -12,3 +12,5 @@ export const HTTP_METHOD = {
 }
 
 export const LOCAL_STORAGE_THEME_KEY = 'theme'
+
+export const POST_LIMIT = 10
