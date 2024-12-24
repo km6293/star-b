@@ -1,6 +1,6 @@
 import type { Config } from 'tailwindcss'
 import tailwindPlugins from './plugins/tailwind.plugin'
-import { LAYOUT_MIN_WIDTH, HEADER_HEIGHT, HOME_MIN_HEIGHT } from './configs/tailwind.constant'
+import { LAYOUT_MAX_WIDTH, HEADER_HEIGHT, HOME_MAX_HEIGHT } from './configs/tailwind.constant'
 
 const config: Config = {
   content: [
@@ -21,11 +21,11 @@ const config: Config = {
       height: {
         header: HEADER_HEIGHT
       },
-      minHeight: {
-        home: HOME_MIN_HEIGHT
+      maxHeight: {
+        home: HOME_MAX_HEIGHT
       },
-      minWidth: {
-        layout: LAYOUT_MIN_WIDTH
+      maxWidth: {
+        layout: LAYOUT_MAX_WIDTH
       },
       padding: {
         header: HEADER_HEIGHT
@@ -34,7 +34,6 @@ const config: Config = {
         360: '360deg'
       },
       colors: {
-        // Neutral
         neutral: {
           0: 'var(--neutral-0)',
           1: 'var(--neutral-1)',
@@ -56,9 +55,27 @@ const config: Config = {
           100: 'var(--neutral-100)'
         },
 
-        // Background
+        border: {
+          neutral: {
+            base: 'var(--border-neutral-base)'
+          }
+        },
+
+        content: {
+          neutral: {
+            primary: 'var(--content-neutral-primary)',
+            base: 'var(--content-neutral-base)'
+          }
+        },
+
+        surface: {
+          neutral: {
+            primary: 'var(--surface-neutral-primary)',
+            base: 'var(--surface-neutral-base)'
+          }
+        },
+
         bg: {
-          weak: 'var(--bg-weak)',
           base: 'var(--bg-base)',
           strong: 'var(--bg-strong)'
         }
