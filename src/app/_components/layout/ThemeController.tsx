@@ -2,7 +2,7 @@
 
 import { APP_THEME } from '@libs/constants'
 import HeaderControlButton from './HeaderControlButton'
-import useTheme from '@hooks/useThemeContext'
+import useTheme from '@/hooks/useThemeContext'
 
 const ThemeController = () => {
   const { theme, toggleTheme } = useTheme()
