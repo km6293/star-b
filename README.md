@@ -3,7 +3,7 @@
 ## 설명
 
 #### 공공데이터 '[대한법률구조공단 법률상담 사례질문답변](https://www.data.go.kr/iim/api/multiCloudApiRequestForm.do?publicDataDetailPk=uddi:8cd2b144-a393-45fb-92da-acf6ceaf8b74&isBusinessApply=N)' 을 활용한 블로그 개발
-주소 : https://star-gnt6sqcfc-km6293s-projects.vercel.app/
+주소 : https://star-b.vercel.app/
 <br /><br/>
 
 ## 시연
@@ -38,6 +38,10 @@ https://github.com/user-attachments/assets/480c3cd1-0458-40d4-8b70-f96e0a7d1148
 3. ScrollProgressBar
 
 <br />
+
+## 웹 성능 측정
+
+![image](https://github.com/user-attachments/assets/b3f4af25-b0de-4a03-bad1-94c074e0d339)
 
 
 
