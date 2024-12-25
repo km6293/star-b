@@ -28,7 +28,6 @@ const DataFetchProvider = ({ children }: Props) => {
   const [total, setTotalPost] = useState(0)
 
   const updateSearch = useCallback((input: string) => {
-    setPage(1)
     setSearch(input)
   }, [])
 
