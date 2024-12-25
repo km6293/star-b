@@ -19,7 +19,7 @@ export default function PostArticle({ children, lawCase }: PostArticleType) {
     <article
       className={clsx(
         'flex h-full flex-col gap-2 rounded-md border border-surface-neutral-base shadow-md transition',
-        'hover:shadow-xl dark:hover:border-content-neutral-primary'
+        'cursor-pointer hover:shadow-xl dark:hover:border-content-neutral-primary'
       )}
       onClick={onClick}>
       {children}

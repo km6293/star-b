@@ -6,9 +6,9 @@ export default function DomainLayout({
   children: React.ReactNode
 }>) {
   return (
-    <>
+    <span>
       <Header />
-      <main className="flex flex-1 flex-col pt-10">{children}</main>
-    </>
+      <main>{children}</main>
+    </span>
   )
 }
