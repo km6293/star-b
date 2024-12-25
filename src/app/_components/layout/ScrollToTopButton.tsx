@@ -51,7 +51,7 @@ export default function ScrollToTopButton() {
       {isVisible && (
         <button
           type="button"
-          className="fixed bottom-4 right-4 z-50 flex h-10 w-10 items-center justify-center rounded-full bg-content-neutral-primary shadow-lg"
+          className="fixed bottom-4 right-4 z-50 flex h-10 w-10 items-center justify-center rounded-full bg-content-neutral-primary text-bg-base shadow-lg"
           aria-label="최상단 이동"
           onClick={onClick}>
           <ArrowUpSvg />

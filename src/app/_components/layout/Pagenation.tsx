@@ -20,7 +20,7 @@ export default function Pagenation({ contains }: Props) {
   return (
     <Form
       action=""
-      className="star-medium20 flex gap-2 self-center p-10">
+      className="star-medium20 flex gap-2 self-center py-10">
       <button
         type="submit"
         className="rounded-md bg-transparent px-2 py-1 text-content-neutral-primary hover:bg-surface-neutral-base"

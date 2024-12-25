@@ -36,7 +36,7 @@ export default function PostContainer() {
   return (
     <section className="mx-auto w-full justify-items-center">
       <Suspense fallback={<p>데이터를 불러오고 있습니다.</p>}>
-        <div className="grid max-w-layout grid-cols-1 gap-8 md:grid-cols-2 lg:gap-12">
+        <div className="grid max-w-layout grid-cols-1 gap-8 px-10 md:grid-cols-2 lg:gap-12">
           {data.data.map(lawCase => (
             <Post
               key={lawCase.id}
