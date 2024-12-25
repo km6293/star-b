@@ -29,8 +29,8 @@ export default function PostContainer() {
     return <Skeleton />
   }
 
-  if (!data) {
-    return
+  if (!data || data.data.length === 0) {
+    return <div className="self-center">검색 결과가 없습니다</div>
   }
 
   return (

@@ -8,11 +8,11 @@ export default function DomainLayout({
   children: React.ReactNode
 }>) {
   return (
-    <span>
+    <div style={{ minHeight: '100vh', display: 'flex', flexDirection: 'column' }}>
       <Header />
-      <main>{children}</main>
+      <main style={{ flex: 1 }}>{children}</main>
       <ScrollToTopButton />
       <Footer />
-    </span>
+    </div>
   )
 }

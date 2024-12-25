@@ -16,11 +16,11 @@ export default function Pagenation({ contains }: Props) {
   const handleChangePage = (newPage: number) => {
     updatePage(newPage)
   }
-  if (total === 0) return <div className="self-center">검색 결과가 없습니다</div>
+  if (total === 0) return
   return (
     <Form
       action=""
-      className="star-medium20 flex gap-2 self-center py-10">
+      className="flex gap-2 self-center py-10 star-medium20">
       <button
         type="submit"
         className="rounded-md bg-transparent px-2 py-1 text-content-neutral-primary hover:bg-surface-neutral-base"
