@@ -64,7 +64,8 @@ const config: Config = {
         content: {
           neutral: {
             primary: 'var(--content-neutral-primary)',
-            base: 'var(--content-neutral-base)'
+            base: 'var(--content-neutral-base)',
+            week: 'var(--content-neutral-week)'
           }
         },
 
