@@ -1,30 +1,28 @@
 'use client'
 
-import useInternalRouter from '@hooks/useInternalRouter'
 import { POST_LIMIT } from '@libs/constants'
 import useDataFetchContext from '@hooks/useDataFetchContext'
 import clsx from 'clsx'
-import { usePathname, useSearchParams } from 'next/navigation'
+import Form from 'next/form'
 
-export default function Pagenation() {
-  const { page, total, updatePage } = useDataFetchContext()
+type Props = {
+  contains?: string
+}
+
+export default function Pagenation({ contains }: Props) {
+  const { total, page, updatePage } = useDataFetchContext()
   const totalPage = Math.ceil(total / POST_LIMIT)
 
-  const { replace } = useInternalRouter()
-  const pathname = usePathname()
-  const searchParams = useSearchParams()
-  const params = new URLSearchParams(searchParams)
-
   const handleChangePage = (newPage: number) => {
-    if (page === newPage) return
-    params.set('pagination[page]', newPage.toString())
     updatePage(newPage)
-    replace(pathname + '?' + params.toString())
   }
-
+  if (total === 0) return <div className="self-center">검색 결과가 없습니다</div>
   return (
-    <div className="star-medium20 flex gap-2 self-center p-10">
+    <Form
+      action=""
+      className="star-medium20 flex gap-2 self-center p-10">
       <button
+        type="submit"
         className="rounded-md bg-transparent px-2 py-1 text-content-neutral-primary hover:bg-surface-neutral-base"
         onClick={() => page > 1 && handleChangePage(page - 1)}>
         이전
@@ -41,21 +39,39 @@ export default function Pagenation() {
         .map(i => (
           <button
             key={i}
+            type="submit"
             onClick={() => handleChangePage(i)}
             className={clsx(
               'rounded-md px-3 py-1',
               page === i
                 ? 'pointer-events-none text-content-neutral-primary'
-                : 'bg-transparent" hover:bg-surface-neutral-base'
+                : 'bg-transparent hover:bg-surface-neutral-base'
             )}>
             {i}
           </button>
         ))}
       <button
+        type="submit"
         className="rounded-md bg-transparent px-2 py-1 text-content-neutral-primary hover:bg-surface-neutral-base"
         onClick={() => page < totalPage && handleChangePage(page + 1)}>
         다음
       </button>
-    </div>
+
+      <input
+        type="hidden"
+        name="filters[similarQuestion][$contains]"
+        defaultValue={contains}
+      />
+      <input
+        type="hidden"
+        name="pagination[page]"
+        defaultValue={page.toString()}
+      />
+      <input
+        type="hidden"
+        name="pagination[pageSize]"
+        defaultValue="10"
+      />
+    </Form>
   )
 }
