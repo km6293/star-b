@@ -1,3 +1,4 @@
+import Footer from '@components/layout/Footer'
 import Header from '@components/layout/Header'
 import ScrollToTopButton from '@components/layout/ScrollToTopButton'
 
@@ -11,6 +12,7 @@ export default function DomainLayout({
       <Header />
       <main>{children}</main>
       <ScrollToTopButton />
+      <Footer />
     </span>
   )
 }
